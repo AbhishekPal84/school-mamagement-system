@@ -30,19 +30,18 @@ function Login() {
 
   try {
     const response = await fetch(
-      "${import.meta.env.VITE_API_URL}/api/gallery/login/",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        
-        body: JSON.stringify({
-          username: formData.username,
-          password: formData.password,
-        }),
-      }
-    );
+  `https://school-mamagement-system-1.onrender.com/api/gallery/login/`,
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      username: formData.username,
+      password: formData.password,
+    }),
+  }
+);
 
     const data = await response.json();
 
