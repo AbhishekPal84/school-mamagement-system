@@ -10,7 +10,7 @@ function Gallery() {
   const [selectedImageId, setSelectedImageId] = useState("");
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/gallery/images/", {
+    fetch("${import.meta.env.VITE_API_URL}/api/gallery/images/", {
   credentials: "include",
 })
         .then((response) => response.json())
@@ -31,7 +31,7 @@ const handleDelete = async (id) => {
 
     try {
         const response = await fetch(
-  `http://127.0.0.1:8000/api/gallery/images/?id=${id}`,
+  `${import.meta.env.VITE_API_URL}/api/gallery/images/?id=${id}`,
   {
     method: "DELETE",
     credentials: "include",
@@ -67,7 +67,7 @@ const handleDelete = async (id) => {
 
     try {
       const response = await fetch(
-  "http://127.0.0.1:8000/api/gallery/images/",
+  "${import.meta.env.VITE_API_URL}/api/gallery/images/",
   {
     method: "POST",
     credentials: "include",
