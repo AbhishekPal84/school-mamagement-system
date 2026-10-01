@@ -30,7 +30,7 @@ function Login() {
 
   try {
     const response = await fetch(
-  `https://school-mamagement-system-1.onrender.com/api/gallery/login/`,
+  `${import.meta.env.VITE_API_URL}/api/gallery/login/`,
   {
     method: "POST",
     headers: {

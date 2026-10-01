@@ -61,7 +61,7 @@ function Register() {
 
     try {
       const response = await fetch(
-        "${import.meta.env.VITE_API_URL}/api/gallery/register/",
+        `${import.meta.env.VITE_API_URL}/api/gallery/register/`,
         {
           method: "POST",
           headers: {

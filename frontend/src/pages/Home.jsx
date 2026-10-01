@@ -9,7 +9,7 @@ function Home() {
   const [selectedFacility, setSelectedFacility] = useState(null);
 
   useEffect(() => {
-    fetch("${import.meta.env.VITE_API_URL}/api/gallery/images/")
+    fetch('${import.meta.env.VITE_API_URL}/api/gallery/images/')
       .then((response) => response.json())
       .then((data) => {
     console.log("Gallery Data:", data);
